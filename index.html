@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <title>part 7 ex 1</title>
+    </head>
+
+    <body>
+        <input type="number" name="number1" id="number1"><br>
+        <input type="number" name="number2" id="number2"><br>
+        <button onclick="add(document.getElementById('number1').value,document.getElementById('number2').value)">Multiplier</button>
+
+        <script>
+            function add(nb1, nb2) {
+                var multiplication = Number(nb1) * Number(nb2);
+                alert(multiplication);
+            }
+        </script>
+    </body>
+
+</html>
