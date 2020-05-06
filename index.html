@@ -1,22 +1,26 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="fr" dir="ltr">
     <head>
         <meta charset="utf-8" />
         <title>part 7 ex 1</title>
     </head>
-
     <body>
-        <input type="number" name="number1" id="number1"><br>
-        <input type="number" name="number2" id="number2"><br>
-        <button onclick="add(document.getElementById('number1').value,document.getElementById('number2').value)">Multiplier</button>
-
+        <form>
+            <label for="number1">Nombre 1 : </label>
+            <input type="text" name="number1" id="number1"/>
+            <label for="number2">Nombre 2 : </label>
+            <input type="text" name="number2" id="number2"/>
+            <button onclick="multiply(document.getElementById('number1').value, document.getElementById('number2').value)">Multiplier</button>
+        </form>
         <script>
-            function add(nb1, nb2) {
-                var multiplication = Number(nb1) * Number(nb2);
-                alert(multiplication);
+            function multiply(nb1, nb2) {
+                if (isNaN(nb1) == true || isNaN(nb2) == true){
+                    alert('Entrez uniquement des nombres s\'il vous plait !');
+                }else{
+                    var multiplication = Number(nb1) * Number(nb2);
+                    alert(multiplication);
+                }
             }
         </script>
     </body>
-
 </html>
